@@ -138,11 +138,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-PASSWORD_HASERS = [
-    # "django.contrib.auth.hashers.PBKDF2PasswordHasher",
-    # "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
-    # "django.contrib.auth.hashers.Argon2PasswordHasher",
-    # "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
-    # "django.contrib.auth.hashers.ScryptPasswordHasher",
-    'django.contrib.auth.hashers.BCryptPasswordHasher',
-]
+# allow inactive user
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
