@@ -38,16 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework_simplejwt',
     'user',
-    'datasource'
+    'datasource',
+    'customuser'
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ),
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'coba.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'coba',
+        'NAME': 'userr',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
